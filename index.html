@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Eric Musyoka Thyaka | Software Developer — StackCraftsStudio</title>
+  <meta name="description" content="Personal portfolio of Eric Musyoka Thyaka, a Software Engineering professional based in Kenya specializing in web applications, Progressive Web Apps (PWAs), Node.js backend development, and PostgreSQL solutions under StackCraftsStudio." />
+  <meta name="keywords" content="Eric Musyoka Thyaka, StackCraftsStudio, Software Developer Kenya, Web Developer Kenya, Progressive Web Apps, PWA Developer, Node.js, PostgreSQL, Full Stack Developer" />
+  <meta name="author" content="Eric Musyoka Thyaka" />
+  <meta name="theme-color" content="#060911" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Eric Musyoka Thyaka | Software Developer — StackCraftsStudio" />
+  <meta property="og:description" content="Building responsive websites, Progressive Web Applications, and custom web solutions using modern technologies." />
+  <meta property="og:url" content="https://portfolio.stackcrafts.com" />
+
+  <style>
+    /* =====================================================================
+       UNIVERSAL RESET & LEGACY BROWSER BASELINE (Android 4.0+ to Modern)
+       - Solid hex fallbacks before every rgba() or gradient
+       - Zero external CDN dependencies
+       - Zero CSS Grid or Flexbox gap dependencies (uses margins instead)
+    ===================================================================== */
+    *,
+    *:before,
+    *:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background-color: #060911;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background-color: #060911;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    h1, h2, h3, h4, p, ul, ol, dl, dd, dt, figure {
+      margin-top: 0;
+    }
+
+    ul, ol {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(59, 130, 246, 0.25);
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    img, svg {
+      max-width: 100%;
+      border: 0;
+      vertical-align: middle;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 16px; /* Prevents iOS & legacy Android input auto-zoom */
+      line-height: 1.4;
+      margin: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    select {
+      -webkit-appearance: menulist;
+      -moz-appearance: menulist;
+      appearance: menulist;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* =====================================================================
+       LAYOUT CONTAINERS & CLEARFIX
+    ===================================================================== */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      content: " ";
+      display: table;
+    }
+
+    .clearfix:after {
+      clear: both;
+    }
+
+    .section {
+      padding-top: 52px;
+      padding-bottom: 52px;
+      border-top: 1px solid #161f33;
+      border-top-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .section-alt {
+      background-color: #090e1a;
+    }
+
+    .section-eyebrow {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #60a5fa;
+    }
+
+    .section-eyebrow-purple {
+      color: #a78bfa;
+    }
+
+    .section-title {
+      margin-bottom: 14px;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+
+    .section-lead {
+      margin-bottom: 24px;
+      max-width: 680px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #cbd5e1;
+    }
+
+    /* =====================================================================
+       CARD SURFACES (Solid Hex Fallbacks + Subtle Depth)
+    ===================================================================== */
+    .card {
+      background-color: #0d1322;
+      background-color: rgba(13, 19, 34, 0.94);
+      border: 1px solid #1e293b;
+      border-color: rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .card-highlight {
+      background-color: #10182b;
+      background-image: -webkit-linear-gradient(135deg, #131d35 0%, #0d1322 100%);
+      background-image: linear-gradient(135deg, #131d35 0%, #0d1322 100%);
+      border: 1px solid #2563eb;
+      border-color: rgba(59, 130, 246, 0.38);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* =====================================================================
+       BUTTONS (Minimum 44px Touch Height, Zero Flex Gap)
+    ===================================================================== */
+    .btn {
+      display: inline-block;
+      min-height: 44px;
+      padding: 11px 18px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none !important;
+      vertical-align: middle;
+    }
+
+    .btn-block-mobile {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    .btn-primary {
+      background-color: #2563eb;
+      background-image: -webkit-linear-gradient(left, #2563eb, #7c3aed);
+      background-image: linear-gradient(to right, #2563eb, #7c3aed);
+      color: #ffffff !important;
+      border-color: #3b82f6;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background-color: #141c2f;
+      color: #f8fafc !important;
+      border-color: #334155;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      background-color: #1e293b;
+      border-color: #60a5fa;
+    }
+
+    .btn-coffee {
+      background-color: #291d0a;
+      color: #fde68a !important;
+      border-color: #b45309;
+    }
+
+    .btn-coffee:hover,
+    .btn-coffee:focus {
+      background-color: #3b290e;
+      color: #ffffff !important;
+      border-color: #f59e0b;
+    }
+
+    .btn-whatsapp {
+      background-color: #059669;
+      color: #ffffff !important;
+      border-color: #10b981;
+    }
+
+    .btn-whatsapp:hover,
+    .btn-whatsapp:focus {
+      background-color: #047857;
+    }
+
+    .btn-sm {
+      min-height: 40px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+
+    .btn-icon {
+      display: inline-block;
+      margin-right: 6px;
+      vertical-align: -3px;
+    }
+
+    /* =====================================================================
+       HEADER & NAVIGATION (Static/Safe Top Bar for All Android WebViews)
+    ===================================================================== */
+    .site-header {
+      width: 100%;
+      background-color: #080c17;
+      border-bottom: 1px solid #1e293b;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .brand-link {
+      display: inline-block;
+      text-decoration: none !important;
+      vertical-align: middle;
+    }
+
+    .brand-badge {
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      padding: 8px;
+      margin-right: 10px;
+      border-radius: 10px;
+      background-color: #2563eb;
+      background-image: -webkit-linear-gradient(135deg, #3b82f6, #7c3aed);
+      background-image: linear-gradient(135deg, #3b82f6, #7c3aed);
+      color: #ffffff;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .brand-text {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .brand-name {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #60a5fa;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    .header-bar {
+      position: relative;
+    }
+
+    .mobile-toggle {
+      float: right;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      background-color: #141c2f;
+      color: #f8fafc;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    .mobile-drawer {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .mobile-drawer a {
+      display: block;
+      min-height: 44px;
+      padding: 11px 12px;
+      margin-bottom: 4px;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .mobile-drawer a:hover,
+    .mobile-drawer a:focus {
+      background-color: #141c2f;
+      color: #ffffff;
+    }
+
+    .mobile-drawer .drawer-actions {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #1e293b;
+    }
+
+    /* =====================================================================
+       HERO SECTION & PASSPORT PHOTO SLOT (pic.png)
+    ===================================================================== */
+    .hero {
+      padding-top: 36px;
+      padding-bottom: 48px;
+      background-color: #060911;
+      background-image: -webkit-linear-gradient(top, #0b1224 0%, #060911 100%);
+      background-image: linear-gradient(to bottom, #0b1224 0%, #060911 100%);
+    }
+
+    .status-pill {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background-color: #06281e;
+      border: 1px solid #10b981;
+      border-color: rgba(16, 185, 129, 0.35);
+      color: #6ee7b7;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 6px;
+      border-radius: 50%;
+      background-color: #10b981;
+      vertical-align: middle;
+    }
+
+    .hero-title {
+      margin-bottom: 16px;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.18;
+      color: #ffffff;
+    }
+
+    .hero-title-accent {
+      color: #60a5fa;
+    }
+
+    .hero-subtitle {
+      margin-bottom: 24px;
+      max-width: 600px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .hero-meta-strip {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid #1e293b;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .hero-meta-item {
+      display: inline-block;
+      margin-right: 16px;
+      margin-bottom: 6px;
+    }
+
+    /* Profile Card & Passport Frame */
+    .profile-window-bar {
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #1e293b;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .window-dot {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      margin-right: 4px;
+      border-radius: 50%;
+      background-color: #475569;
+    }
+
+    .window-dot-blue {
+      background-color: #3b82f6;
+    }
+
+    .kenya-tag {
+      float: right;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background-color: #172554;
+      color: #93c5fd;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .passport-box {
+      background-color: #070b14;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .passport-frame {
+      display: inline-block;
+      width: 132px;
+      height: 164px;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid #3b82f6;
+      background-color: #111827;
+      vertical-align: middle;
+    }
+
+    .passport-frame img {
+      display: block;
+      width: 132px;
+      height: 164px;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .passport-fallback {
+      width: 100%;
+      height: 100%;
+      padding: 24px 8px;
+      background-color: #0f172a;
+      text-align: center;
+    }
+
+    .passport-initials {
+      display: inline-block;
+      width: 46px;
+      height: 46px;
+      line-height: 44px;
+      border-radius: 50%;
+      border: 1px solid #3b82f6;
+      background-color: #172554;
+      color: #93c5fd;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .passport-info {
+      margin-top: 12px;
+    }
+
+    .verified-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background-color: #172554;
+      color: #93c5fd;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .passport-name {
+      margin-top: 8px;
+      margin-bottom: 4px;
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .passport-role {
+      margin-bottom: 4px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .passport-brand {
+      margin-bottom: 0;
+      font-size: 12px;
+      font-weight: 600;
+      color: #c4b5fd;
+    }
+
+    .code-panel {
+      background-color: #070b14;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 12px;
+      line-height: 1.55;
+      color: #cbd5e1;
+    }
+
+    .code-indent {
+      padding-left: 14px;
+    }
+
+    .c-purple { color: #c084fc; }
+    .c-blue { color: #93c5fd; }
+    .c-green { color: #6ee7b7; }
+    .c-amber { color: #fcd34d; }
+
+    /* =====================================================================
+       TAGS, PILLS & LIST ITEMS
+    ===================================================================== */
+    .pill {
+      display: inline-block;
+      padding: 6px 11px;
+      margin-right: 6px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      border: 1px solid #283548;
+      background-color: #141c2f;
+      color: #e2e8f0;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .pill-core {
+      border-color: #3b82f6;
+      background-color: #172554;
+      color: #bfdbfe;
+    }
+
+    .pill-core-purple {
+      border-color: #8b5cf6;
+      background-color: #2e1065;
+      color: #ddd6fe;
+    }
+
+    .feature-item {
+      background-color: #11182b;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .feature-check {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      line-height: 20px;
+      margin-right: 8px;
+      border-radius: 6px;
+      background-color: #172554;
+      color: #60a5fa;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    /* =====================================================================
+       CORE STRENGTHS & SERVICES
+    ===================================================================== */
+    .strength-box {
+      background-color: #070b14;
+      border: 1px solid #1e3a8a;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .strength-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: #60a5fa;
+      margin-bottom: 4px;
+    }
+
+    .strength-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .strength-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 0;
+    }
+
+    .turnaround-note {
+      background-color: #0f1f3d;
+      border: 1px solid #2563eb;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #e2e8f0;
+    }
+
+    .service-icon-box {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      padding: 9px;
+      margin-bottom: 14px;
+      border-radius: 10px;
+      background-color: #172554;
+      color: #60a5fa;
+      text-align: center;
+    }
+
+    .service-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+
+    .service-meta {
+      padding-top: 10px;
+      border-top: 1px solid #1e293b;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    /* =====================================================================
+       PROJECTS SHOWCASE (workers.stackcrafts.com)
+    ===================================================================== */
+    .portal-bar {
+      background-color: #070b14;
+      border-bottom: 1px solid #1e293b;
+      padding: 12px 16px;
+      margin: -20px -20px 20px -20px;
+      border-radius: 15px 15px 0 0;
+      font-size: 12px;
+    }
+
+    .portal-url {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background-color: #141c2f;
+      border: 1px solid #283548;
+      color: #e2e8f0;
+    }
+
+    .filter-tab {
+      display: inline-block;
+      min-height: 40px;
+      padding: 8px 13px;
+      margin-right: 6px;
+      margin-bottom: 8px;
+      border-radius: 9px;
+      border: 1px solid #283548;
+      background-color: #141c2f;
+      color: #cbd5e1;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .filter-tab-active {
+      border-color: #3b82f6;
+      background-color: #1d4ed8;
+      color: #ffffff;
+    }
+
+    .domain-card {
+      display: block;
+      background-color: #070b14;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      text-decoration: none !important;
+    }
+
+    .domain-card:hover,
+    .domain-card:focus {
+      border-color: #3b82f6;
+    }
+
+    /* =====================================================================
+       PROCESS STEPS & FINAL CTA
+    ===================================================================== */
+    .step-num {
+      display: block;
+      font-size: 22px;
+      font-weight: 800;
+      color: #60a5fa;
+      margin-bottom: 8px;
+    }
+
+    .cta-banner {
+      background-color: #0f172a;
+      background-image: -webkit-linear-gradient(135deg, #111c38 0%, #16112c 100%);
+      background-image: linear-gradient(135deg, #111c38 0%, #16112c 100%);
+      border: 1px solid #2563eb;
+      border-radius: 18px;
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    .cta-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .cta-sub {
+      font-size: 15px;
+      color: #cbd5e1;
+      margin-bottom: 22px;
+    }
+
+    /* =====================================================================
+       CONTACT DETAILS & WEB3FORMS FORM
+    ===================================================================== */
+    .contact-row {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #1e293b;
+      font-size: 13px;
+    }
+
+    .contact-label {
+      display: block;
+      color: #94a3b8;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .contact-val {
+      font-weight: 600;
+      color: #f8fafc;
+    }
+
+    .copy-btn {
+      display: inline-block;
+      min-height: 32px;
+      padding: 4px 10px;
+      margin-left: 8px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background-color: #141c2f;
+      color: #e2e8f0;
+      font-size: 12px;
+    }
+
+    .social-chip {
+      display: inline-block;
+      min-height: 40px;
+      padding: 9px 12px;
+      margin-right: 6px;
+      margin-bottom: 8px;
+      border-radius: 9px;
+      border: 1px solid #283548;
+      background-color: #141c2f;
+      color: #f1f5f9 !important;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none !important;
+    }
+
+    .social-chip:hover,
+    .social-chip:focus {
+      border-color: #60a5fa;
+      background-color: #1e293b;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #cbd5e1;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      min-height: 46px;
+      padding: 11px 13px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      background-color: #070b14;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+
+    textarea.form-control {
+      min-height: 112px;
+      resize: vertical;
+    }
+
+    .feedback-box {
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .feedback-success {
+      background-color: #06281e;
+      border: 1px solid #10b981;
+      color: #a7f3d0;
+    }
+
+    .feedback-error {
+      background-color: #2c0b14;
+      border: 1px solid #f43f5e;
+      color: #fecdd3;
+    }
+
+    /* =====================================================================
+       FOOTER
+    ===================================================================== */
+    .site-footer {
+      background-color: #05070d;
+      border-top: 1px solid #1e293b;
+      padding-top: 36px;
+      padding-bottom: 36px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .footer-nav {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .footer-nav a {
+      display: inline-block;
+      margin-right: 16px;
+      margin-bottom: 8px;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #161f33;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* =====================================================================
+       RESPONSIVE MULTI-COLUMN RULES (Tablet >= 640px & Desktop >= 900px)
+       Uses float/inline-block percentage columns with clearfix so even
+       Android 4.0 Browser & UC Browser render multi-column layouts cleanly
+    ===================================================================== */
+    @media only screen and (min-width: 520px) {
+      .btn-block-mobile {
+        display: inline-block;
+        width: auto;
+        margin-right: 8px;
+      }
+
+      .passport-box {
+        text-align: left;
+      }
+
+      .passport-frame {
+        margin-right: 16px;
+      }
+
+      .passport-info {
+        display: inline-block;
+        margin-top: 0;
+        vertical-align: middle;
+        max-width: 62%;
+      }
+    }
+
+    @media only screen and (min-width: 680px) {
+      .section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .hero-title {
+        font-size: 40px;
+      }
+
+      .col-half {
+        float: left;
+        width: 48.5%;
+        margin-right: 3%;
+      }
+
+      .col-half-last {
+        float: left;
+        width: 48.5%;
+        margin-right: 0;
+      }
+
+      .col-third {
+        float: left;
+        width: 31.33%;
+        margin-right: 3%;
+      }
+
+      .col-third-last {
+        float: left;
+        width: 31.33%;
+        margin-right: 0;
+      }
+    }
+
+    @media only screen and (min-width: 920px) {
+      .mobile-toggle {
+        display: none;
+      }
+
+      .mobile-drawer {
+        display: none !important;
+      }
+
+      .desktop-nav {
+        display: inline-block;
+        float: right;
+        margin-top: 2px;
+      }
+
+      .desktop-nav a {
+        display: inline-block;
+        margin-left: 16px;
+        color: #cbd5e1;
+        font-size: 13px;
+        font-weight: 600;
+        vertical-align: middle;
+      }
+
+      .desktop-nav a:hover {
+        color: #ffffff;
+      }
+
+      .desktop-nav .nav-cta {
+        margin-left: 12px;
+        margin-bottom: 0;
+      }
+
+      .hero {
+        padding-top: 64px;
+        padding-bottom: 76px;
+      }
+
+      .hero-title {
+        font-size: 46px;
+      }
+
+      .col-7 {
+        float: left;
+        width: 57%;
+        margin-right: 4%;
+      }
+
+      .col-5 {
+        float: left;
+        width: 39%;
+      }
+
+      .col-quarter {
+        float: left;
+        width: 23.5%;
+        margin-right: 2%;
+      }
+
+      .col-quarter-last {
+        float: left;
+        width: 23.5%;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================================================================
+       HEADER & NAVIGATION
+  ==================================================================== -->
+  <header class="site-header">
+    <div class="container header-bar clearfix">
+      <a href="#home" class="brand-link">
+        <span class="brand-badge" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Eric Musyoka Thyaka</span>
+          <span class="brand-sub mono">StackCraftsStudio</span>
+        </span>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button type="button" id="mobile-menu-btn" class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">
+        Menu &#9776;
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Primary Navigation" class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://support.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-coffee btn-sm nav-cta">Buy Me a Coffee</a>
+        <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm nav-cta">Project Hub</a>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Contact Me</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="container mobile-drawer hidden">
+      <nav aria-label="Mobile Navigation">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="drawer-actions">
+        <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block-mobile">View Project Showcase</a>
+        <a href="https://support.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-coffee btn-block-mobile">Buy Me a Coffee</a>
+        <a href="#contact" class="btn btn-primary btn-block-mobile mobile-nav-link">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================
+         HERO SECTION
+    ==================================================================== -->
+    <section id="home" class="hero">
+      <div class="container clearfix">
+        <!-- Left Column -->
+        <div class="col-7">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            Available for opportunities &amp; projects &bull; Kenya
+          </div>
+
+          <h1 class="hero-title">
+            Software Developer Building
+            <span class="hero-title-accent">Smart Digital Solutions</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            I build responsive websites, Progressive Web Applications and custom web solutions using modern technologies.
+          </p>
+
+          <div>
+            <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block-mobile">
+              View My Projects &rarr;
+            </a>
+            <a href="#contact" class="btn btn-secondary btn-block-mobile">
+              Contact Me
+            </a>
+            <a href="https://support.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-coffee btn-block-mobile">
+              <span class="btn-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </span>
+              Buy Me a Coffee
+            </a>
+          </div>
+
+          <div class="hero-meta-strip">
+            <span class="hero-meta-item mono">
+              BRAND: <a href="https://stackcrafts.com" target="_blank" rel="noopener noreferrer">stackcrafts.com</a>
+            </span>
+            <span class="hero-meta-item mono">
+              SHOWCASE: <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer">workers.stackcrafts.com</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Column: Passport Photo & Developer Profile Card -->
+        <div class="col-5">
+          <div class="card">
+            <div class="profile-window-bar clearfix">
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot window-dot-blue"></span>
+              <span class="mono" style="margin-left: 6px;">developer.profile</span>
+              <span class="kenya-tag mono">KENYA</span>
+            </div>
+
+            <!-- Passport Photo Container (pic.png) -->
+            <div class="passport-box">
+              <div class="passport-frame">
+                <img
+                  id="passport-img"
+                  src="pic.png"
+                  width="132"
+                  height="164"
+                  alt="Eric Musyoka Thyaka - Software Developer"
+                  onerror="this.style.display='none'; document.getElementById('passport-fallback').style.display='block';"
+                />
+                <div id="passport-fallback" class="passport-fallback" style="display: none;">
+                  <div class="passport-initials mono">ET</div>
+                  <div class="mono" style="font-size: 11px; color: #cbd5e1; margin-top: 10px;">pic.png</div>
+                  <div style="font-size: 10px; color: #64748b; margin-top: 2px;">Passport Photo</div>
+                </div>
+              </div>
+
+              <div class="passport-info">
+                <span class="verified-badge mono">VERIFIED PROFILE</span>
+                <h2 class="passport-name">Eric Musyoka Thyaka</h2>
+                <p class="passport-role">Software Developer &bull; Web &amp; PWA</p>
+                <p class="passport-brand mono">StackCraftsStudio</p>
+              </div>
+            </div>
+
+            <!-- Developer Summary Code Block -->
+            <div class="code-panel mono">
+              <div><span class="c-purple">const</span> <span class="c-blue">developer</span> = {</div>
+              <div class="code-indent">
+                <div>name: <span class="c-green">"Eric Musyoka Thyaka"</span>,</div>
+                <div>brand: <span class="c-green">"StackCraftsStudio"</span>,</div>
+                <div>location: <span class="c-green">"Kenya"</span>,</div>
+                <div>focus: [</div>
+                <div class="code-indent c-blue">
+                  <div>"Web Applications",</div>
+                  <div>"Progressive Web Apps (PWAs)",</div>
+                  <div>"Node.js &amp; PostgreSQL Systems"</div>
+                </div>
+                <div>],</div>
+                <div>showcase: <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="c-amber">"workers.stackcrafts.com"</a></div>
+              </div>
+              <div>};</div>
+            </div>
+
+            <div style="margin-top: 14px;">
+              <span class="pill pill-core">Node.js</span>
+              <span class="pill pill-core">HTML / CSS / JS</span>
+              <span class="pill pill-core-purple">PostgreSQL</span>
+              <span class="pill pill-core-purple">PWAs</span>
+              <span class="pill">Supabase</span>
+              <span class="pill">React</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT ME SECTION
+    ==================================================================== -->
+    <section id="about" class="section">
+      <div class="container clearfix">
+        <div class="col-half">
+          <span class="section-eyebrow mono">01 // About Me</span>
+          <h2 class="section-title">Focused on Practical, Reliable Software Engineering</h2>
+          <p class="section-lead">
+            I am <strong>Eric Musyoka Thyaka</strong>, a Software Engineering professional based in Kenya building practical digital solutions under <a href="https://stackcrafts.com" target="_blank" rel="noopener noreferrer">StackCraftsStudio</a>.
+          </p>
+          <p class="section-lead">
+            My work focuses on designing, developing, and deploying functional websites, Progressive Web Applications (PWAs), and database-driven business management systems that solve real operational requirements with clean architecture and dependable performance.
+          </p>
+          <div style="margin-top: 16px;">
+            <a href="https://stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Visit StackCraftsStudio</a>
+            <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View Live Showcase &rarr;</a>
+          </div>
+        </div>
+
+        <div class="col-half-last">
+          <div class="card">
+            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: #cbd5e1; margin-bottom: 14px;">
+              Core Interests &amp; Strengths
+            </h3>
+            <ul>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Web development</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Backend development</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Frontend development</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Progressive Web Applications</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Database-driven applications</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Business management systems</li>
+              <li class="feature-item" style="margin-bottom: 0;"><span class="feature-check">&#10003;</span> Modern digital solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TECHNICAL SKILLS SECTION
+    ==================================================================== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <span class="section-eyebrow mono">02 // Technical Skills</span>
+        <h2 class="section-title">Technologies &amp; Core Engineering Strengths</h2>
+        <p class="section-lead">
+          A practical technology stack built around Node.js backend engineering, modern HTML/CSS/JavaScript frontends, PostgreSQL relational databases, and Progressive Web Applications.
+        </p>
+
+        <!-- Strongest Technical Areas Highlight -->
+        <div class="card-highlight">
+          <span class="verified-badge mono" style="margin-bottom: 8px;">STRONGEST TECHNICAL AREAS</span>
+          <h3 style="font-size: 18px; color: #ffffff; margin-bottom: 14px;">Core Specializations</h3>
+
+          <div class="clearfix">
+            <div class="col-quarter">
+              <div class="strength-box">
+                <div class="strength-tag mono">01 / BACKEND</div>
+                <div class="strength-title">Node.js Backend Development</div>
+                <p class="strength-desc">APIs, server logic, authentication &amp; business workflows.</p>
+              </div>
+            </div>
+            <div class="col-quarter">
+              <div class="strength-box">
+                <div class="strength-tag mono">02 / FRONTEND</div>
+                <div class="strength-title">HTML / CSS / JavaScript</div>
+                <p class="strength-desc">Responsive, fast-loading, accessible user interfaces.</p>
+              </div>
+            </div>
+            <div class="col-quarter">
+              <div class="strength-box">
+                <div class="strength-tag mono" style="color: #c084fc;">03 / DATABASE</div>
+                <div class="strength-title">PostgreSQL Databases</div>
+                <p class="strength-desc">Relational schemas, structured data &amp; reliable queries.</p>
+              </div>
+            </div>
+            <div class="col-quarter-last">
+              <div class="strength-box">
+                <div class="strength-tag mono" style="color: #c084fc;">04 / WEB &amp; PWA</div>
+                <div class="strength-title">Modern Web &amp; PWA Dev</div>
+                <p class="strength-desc">Installable, cross-device web &amp; Progressive Web Apps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categorized Skills -->
+        <div class="clearfix">
+          <div class="col-third">
+            <div class="card">
+              <h3 style="font-size: 16px; color: #ffffff; margin-bottom: 12px;">Frontend</h3>
+              <div>
+                <span class="pill pill-core">HTML</span>
+                <span class="pill pill-core">CSS</span>
+                <span class="pill pill-core">JavaScript</span>
+                <span class="pill">React</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-third">
+            <div class="card">
+              <h3 style="font-size: 16px; color: #ffffff; margin-bottom: 12px;">Backend</h3>
+              <div>
+                <span class="pill pill-core-purple">Node.js</span>
+                <span class="pill">Java</span>
+                <span class="pill">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-third-last">
+            <div class="card">
+              <h3 style="font-size: 16px; color: #ffffff; margin-bottom: 12px;">Database</h3>
+              <div>
+                <span class="pill pill-core">PostgreSQL</span>
+                <span class="pill">Supabase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clearfix">
+          <div class="col-half">
+            <div class="card">
+              <h3 style="font-size: 16px; color: #ffffff; margin-bottom: 12px;">Tools &amp; Deployment</h3>
+              <div>
+                <span class="pill">Git</span>
+                <span class="pill">GitHub</span>
+                <span class="pill">Vercel</span>
+                <span class="pill">Render</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-half-last">
+            <div class="card">
+              <h3 style="font-size: 16px; color: #ffffff; margin-bottom: 12px;">Other</h3>
+              <div>
+                <span class="pill pill-core-purple">Progressive Web Apps</span>
+                <span class="pill">Dart</span>
+                <span class="pill">Fiber networking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SERVICES SECTION
+    ==================================================================== -->
+    <section id="services" class="section">
+      <div class="container">
+        <span class="section-eyebrow mono">03 // Services</span>
+        <h2 class="section-title">Practical Web &amp; Software Solutions</h2>
+        <p class="section-lead">
+          Custom websites, web applications, and cloud-hosted digital systems engineered for businesses, organizations, and individuals.
+        </p>
+
+        <div class="turnaround-note">
+          <strong>Delivery Timeline:</strong> Typical website and web application projects can be delivered within <strong>approximately one week</strong>, depending on project scope and requirements.
+        </div>
+
+        <div class="clearfix">
+          <div class="col-third">
+            <article class="card">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="service-title">Website Development</h3>
+              <p class="service-desc">Responsive and professional websites for businesses, organizations and individuals.</p>
+              <div class="service-meta mono">HTML &bull; CSS &bull; JavaScript &bull; Mobile-First</div>
+            </article>
+          </div>
+
+          <div class="col-third">
+            <article class="card">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3 class="service-title">Web Application Development</h3>
+              <p class="service-desc">Custom web applications designed around specific business requirements.</p>
+              <div class="service-meta mono">Node.js &bull; Full-Stack &bull; Custom Logic</div>
+            </article>
+          </div>
+
+          <div class="col-third-last">
+            <article class="card">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
+              <h3 class="service-title">Progressive Web Applications</h3>
+              <p class="service-desc">Installable web applications that provide an app-like experience across devices.</p>
+              <div class="service-meta mono">Installable &bull; Cross-Device &bull; Fast</div>
+            </article>
+          </div>
+        </div>
+
+        <div class="clearfix">
+          <div class="col-third">
+            <article class="card">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              </div>
+              <h3 class="service-title">Business Management Systems</h3>
+              <p class="service-desc">Custom systems for managing records, users, operations and business processes.</p>
+              <div class="service-meta mono">Records &bull; Users &bull; Operations</div>
+            </article>
+          </div>
+
+          <div class="col-third">
+            <article class="card">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="service-title">Database Solutions</h3>
+              <p class="service-desc">PostgreSQL/Supabase-powered applications with structured data management.</p>
+              <div class="service-meta mono">PostgreSQL &bull; Supabase &bull; Structured Data</div>
+            </article>
+          </div>
+
+          <div class="col-third-last">
+            <article class="card">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <h3 class="service-title">Deployment &amp; Hosting</h3>
+              <p class="service-desc">Application deployment using platforms such as Vercel and Render.</p>
+              <div class="service-meta mono">Vercel &bull; Render &bull; Live Production</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PROJECTS SHOWCASE SECTION (workers.stackcrafts.com)
+    ==================================================================== -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <span class="section-eyebrow mono">04 // Project Showcase</span>
+        <h2 class="section-title">Real-World Deployed Applications</h2>
+        <p class="section-lead">
+          All of my live projects, demos, and source code repositories (where available) are hosted and organized centrally at <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer">workers.stackcrafts.com</a>.
+        </p>
+
+        <div style="margin-bottom: 24px;">
+          <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block-mobile">
+            View All Projects on workers.stackcrafts.com &rarr;
+          </a>
+        </div>
+
+        <div class="card-highlight">
+          <div class="portal-bar clearfix">
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <span class="window-dot window-dot-blue"></span>
+            <span class="portal-url mono" style="margin-left: 6px;">https://workers.stackcrafts.com</span>
+          </div>
+
+          <div class="clearfix">
+            <div class="col-7">
+              <span class="verified-badge mono">STACKCRAFTSSTUDIO SHOWCASE</span>
+              <h3 style="font-size: 20px; color: #ffffff; margin-top: 10px; margin-bottom: 10px;">
+                Explore Live Web Apps, PWAs &amp; Full-Stack Builds
+              </h3>
+              <p style="font-size: 14px; line-height: 1.65; color: #cbd5e1; margin-bottom: 16px;">
+                Visit <strong>workers.stackcrafts.com</strong> to view my actual deployed applications, inspect live demos, and access GitHub source repositories where available.
+              </p>
+
+              <!-- Interactive Category Switcher -->
+              <div style="margin-bottom: 12px;">
+                <button type="button" data-category="all" class="filter-tab filter-tab-active">All Deployed Work</button>
+                <button type="button" data-category="webapp" class="filter-tab">Web Applications</button>
+                <button type="button" data-category="pwa" class="filter-tab">Progressive Web Apps</button>
+                <button type="button" data-category="business" class="filter-tab">Business Systems</button>
+              </div>
+
+              <div class="card" style="background-color: #070b14; margin-bottom: 16px;">
+                <h4 id="category-title" style="font-size: 15px; color: #ffffff; margin-bottom: 6px;">
+                  Complete StackCraftsStudio Showcase
+                </h4>
+                <p id="category-desc" style="font-size: 13px; color: #94a3b8; margin-bottom: 14px;">
+                  Browse all live web applications, Progressive Web Apps, and database-backed solutions hosted through workers.stackcrafts.com.
+                </p>
+                <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Live Demo Portal &rarr;
+                </a>
+                <a href="https://github.com/Ericmusyoka2020" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  GitHub Profile
+                </a>
+              </div>
+            </div>
+
+            <div class="col-5">
+              <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="domain-card">
+                <div class="mono" style="font-size: 11px; color: #60a5fa; margin-bottom: 4px;">SHOWCASE DIRECTORY &rarr;</div>
+                <div style="font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">Full-Stack Web Applications</div>
+                <div style="font-size: 12px; color: #94a3b8;">Node.js, HTML/CSS/JavaScript, React, PostgreSQL &amp; Supabase builds.</div>
+              </a>
+
+              <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="domain-card">
+                <div class="mono" style="font-size: 11px; color: #a78bfa; margin-bottom: 4px;">SHOWCASE DIRECTORY &rarr;</div>
+                <div style="font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">Progressive Web Applications (PWAs)</div>
+                <div style="font-size: 12px; color: #94a3b8;">Installable, responsive web apps built for mobile and desktop devices.</div>
+              </a>
+
+              <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="domain-card" style="margin-bottom: 0;">
+                <div class="mono" style="font-size: 11px; color: #6ee7b7; margin-bottom: 4px;">SHOWCASE DIRECTORY &rarr;</div>
+                <div style="font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">Business Management Systems</div>
+                <div style="font-size: 12px; color: #94a3b8;">Record management, user operations, and custom business workflows.</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         EXPERIENCE SECTION ("Building Through Real Projects")
+    ==================================================================== -->
+    <section id="experience" class="section">
+      <div class="container clearfix">
+        <div class="col-5">
+          <span class="section-eyebrow section-eyebrow-purple mono">05 // Practical Background</span>
+          <h2 class="section-title">Building Through Real Projects</h2>
+          <p class="section-lead">
+            My software engineering experience is built through designing, developing, and deploying real-world websites and web applications from database architecture to live production hosting.
+          </p>
+          <p class="section-lead">
+            Explore my deployed work directly on <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer">workers.stackcrafts.com</a>.
+          </p>
+        </div>
+
+        <div class="col-7" style="margin-right: 0;">
+          <div class="card">
+            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: #cbd5e1; margin-bottom: 14px;">
+              Practical Engineering Areas
+            </h3>
+            <ul>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Frontend development</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Node.js backend development</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> PostgreSQL databases</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Supabase</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Progressive Web Apps</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> API integration</li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span> Application deployment</li>
+              <li class="feature-item" style="margin-bottom: 0;"><span class="feature-check">&#10003;</span> Business-oriented digital solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         DEVELOPMENT PROCESS SECTION
+    ==================================================================== -->
+    <section id="process" class="section section-alt">
+      <div class="container">
+        <span class="section-eyebrow mono">06 // Workflow</span>
+        <h2 class="section-title">Development Process</h2>
+        <p class="section-lead">
+          A straightforward four-step engineering workflow from initial discovery to live online deployment.
+        </p>
+
+        <div class="clearfix">
+          <div class="col-quarter">
+            <div class="card">
+              <span class="step-num mono">01</span>
+              <h3 class="service-title">Understand</h3>
+              <p class="service-desc" style="margin-bottom: 0;">Understand the client's requirements and objectives.</p>
+            </div>
+          </div>
+
+          <div class="col-quarter">
+            <div class="card">
+              <span class="step-num mono" style="color: #818cf8;">02</span>
+              <h3 class="service-title">Design</h3>
+              <p class="service-desc" style="margin-bottom: 0;">Plan the interface, functionality and technical architecture.</p>
+            </div>
+          </div>
+
+          <div class="col-quarter">
+            <div class="card">
+              <span class="step-num mono" style="color: #c084fc;">03</span>
+              <h3 class="service-title">Build</h3>
+              <p class="service-desc" style="margin-bottom: 0;">Develop, test and integrate the application.</p>
+            </div>
+          </div>
+
+          <div class="col-quarter-last">
+            <div class="card">
+              <span class="step-num mono" style="color: #34d399;">04</span>
+              <h3 class="service-title">Deploy</h3>
+              <p class="service-desc" style="margin-bottom: 0;">Deploy the completed solution and make it available online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FINAL CALL TO ACTION SECTION
+    ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 class="cta-title">Have an idea for a website or web application?</h2>
+          <p class="cta-sub">Let's turn your idea into a practical digital solution.</p>
+          <div>
+            <a href="#contact" class="btn btn-primary btn-block-mobile">Contact Me</a>
+            <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block-mobile">View My Projects &rarr;</a>
+            <a href="https://support.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-coffee btn-block-mobile">Buy Me a Coffee</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CONTACT SECTION (Web3Forms Email + WhatsApp + Social Links)
+    ==================================================================== -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <span class="section-eyebrow mono">07 // Contact</span>
+        <h2 class="section-title">Start a Conversation</h2>
+        <p class="section-lead">
+          Reach out directly via WhatsApp, phone, or the email contact form below for software engineering opportunities and custom web projects.
+        </p>
+
+        <div class="clearfix">
+          <!-- Contact Info Column -->
+          <div class="col-5">
+            <div class="card">
+              <h3 style="font-size: 18px; color: #ffffff; margin-bottom: 4px;">Eric Musyoka Thyaka</h3>
+              <p style="font-size: 13px; color: #94a3b8; margin-bottom: 16px;">Software Developer &bull; Kenya</p>
+
+              <a href="https://wa.me/254710911645" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block-mobile" style="display: block; width: 100%; margin-right: 0;">
+                Chat on WhatsApp (0710911645)
+              </a>
+
+              <a href="https://support.stackcrafts.com" target="_blank" rel="noopener noreferrer" class="btn btn-coffee btn-block-mobile" style="display: block; width: 100%; margin-right: 0;">
+                Buy Me a Coffee (support.stackcrafts.com)
+              </a>
+
+              <div style="margin-top: 16px;">
+                <div class="contact-row">
+                  <span class="contact-label">Phone / WhatsApp</span>
+                  <span class="contact-val mono">
+                    <a href="tel:+254710911645">0710911645</a>
+                    <button type="button" id="copy-phone-btn" class="copy-btn">Copy</button>
+                  </span>
+                </div>
+
+                <div class="contact-row">
+                  <span class="contact-label">Brand</span>
+                  <span class="contact-val mono">
+                    <a href="https://stackcrafts.com" target="_blank" rel="noopener noreferrer">https://stackcrafts.com</a>
+                  </span>
+                </div>
+
+                <div class="contact-row">
+                  <span class="contact-label">Projects</span>
+                  <span class="contact-val mono">
+                    <a href="https://workers.stackcrafts.com" target="_blank" rel="noopener noreferrer">https://workers.stackcrafts.com</a>
+                  </span>
+                </div>
+
+                <div class="contact-row" style="border-bottom: none;">
+                  <span class="contact-label">Portfolio</span>
+                  <span class="contact-val mono">
+                    <a href="https://portfolio.stackcrafts.com" target="_blank" rel="noopener noreferrer">https://portfolio.stackcrafts.com</a>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #1e293b;">
+                <div class="mono" style="font-size: 11px; color: #94a3b8; text-transform: uppercase; margin-bottom: 10px;">Social &amp; Developer Profiles</div>
+                <a href="https://www.linkedin.com/in/thyaka-eric-05742137a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-chip">LinkedIn</a>
+                <a href="https://x.com/EricMusyok17" target="_blank" rel="noopener noreferrer" class="social-chip">X (Twitter)</a>
+                <a href="https://www.facebook.com/profile.php?id=61593466963585" target="_blank" rel="noopener noreferrer" class="social-chip">Facebook</a>
+                <a href="https://github.com/Ericmusyoka2020" target="_blank" rel="noopener noreferrer" class="social-chip">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column (Works with JS XHR/Fetch AND native HTML POST fallback) -->
+          <div class="col-7" style="margin-right: 0;">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="card">
+              <input type="hidden" name="access_key" value="bf0e28a0-7666-4bfc-91ad-bcb1699d5d6c" />
+              <input type="hidden" name="subject" value="New Portfolio Inquiry — StackCraftsStudio" />
+              <input type="hidden" name="from_name" value="Eric Musyoka Thyaka Portfolio" />
+              <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off" />
+
+              <div class="clearfix">
+                <div class="col-half form-group">
+                  <label for="contact-name" class="form-label">Name *</label>
+                  <input type="text" id="contact-name" name="name" required placeholder="Your full name" class="form-control" />
+                </div>
+
+                <div class="col-half-last form-group">
+                  <label for="contact-email" class="form-label">Email *</label>
+                  <input type="email" id="contact-email" name="email" required placeholder="you@example.com" class="form-control" />
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <div class="col-half form-group">
+                  <label for="contact-phone" class="form-label">Phone</label>
+                  <input type="tel" id="contact-phone" name="phone" placeholder="e.g. 07XX XXX XXX" class="form-control" />
+                </div>
+
+                <div class="col-half-last form-group">
+                  <label for="contact-project-type" class="form-label">Project Type *</label>
+                  <select id="contact-project-type" name="project_type" required class="form-control">
+                    <option value="Website Development">Website Development</option>
+                    <option value="Web Application Development">Web Application Development</option>
+                    <option value="Progressive Web Application">Progressive Web Application (PWA)</option>
+                    <option value="Business Management System">Business Management System</option>
+                    <option value="Database Solution">Database Solution (PostgreSQL / Supabase)</option>
+                    <option value="Deployment & Hosting">Deployment &amp; Hosting</option>
+                    <option value="Job / Engineering Opportunity">Job / Engineering Opportunity</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message *</label>
+                <textarea id="contact-message" name="message" rows="4" required placeholder="Briefly describe your project requirements, timeline, or opportunity..." class="form-control"></textarea>
+              </div>
+
+              <div id="form-feedback" role="status" aria-live="polite" class="feedback-box hidden"></div>
+
+              <div>
+                <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-block-mobile">
+                  <span id="contact-submit-text">Send Message</span>
+                </button>
+                <span style="display: inline-block; font-size: 12px; color: #94a3b8; margin-top: 6px;">
+                  Delivers directly to Eric's email via Web3Forms
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       FOOTER
+  ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <div style="font-size: 16px; font-weight: 700; color: #ffffff;">Eric Musyoka Thyaka</div>
+        <div style="margin-top: 4px; color: #cbd5e1;">Software Developer | Web &amp; PWA Development</div>
+        <div class="mono" style="margin-top: 4px; font-size: 12px;">
+          <a href="https://stackcrafts.com" target="_blank" rel="noopener noreferrer">StackCraftsStudio</a>
+        </div>
+      </div>
+
+      <nav aria-label="Footer Navigation" class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://support.stackcrafts.com" target="_blank" rel="noopener noreferrer" style="color: #fcd34d;">Buy Me a Coffee</a>
+      </nav>
+
+      <div>
+        <a href="https://github.com/Ericmusyoka2020" target="_blank" rel="noopener noreferrer" class="social-chip">GitHub</a>
+        <a href="https://www.linkedin.com/in/thyaka-eric-05742137a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-chip">LinkedIn</a>
+        <a href="https://x.com/EricMusyok17" target="_blank" rel="noopener noreferrer" class="social-chip">X (Twitter)</a>
+        <a href="https://www.facebook.com/profile.php?id=61593466963585" target="_blank" rel="noopener noreferrer" class="social-chip">Facebook</a>
+        <a href="https://wa.me/254710911645" target="_blank" rel="noopener noreferrer" class="social-chip">WhatsApp (0710911645)</a>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span id="current-year">2026</span> Eric Musyoka Thyaka &bull; StackCraftsStudio. Based in Kenya.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       STRICT ES5 JAVASCRIPT (Compatible with Android 4.0+ to Modern)
+       - Zero const/let, arrow functions, template literals, or async/await
+       - Uses XMLHttpRequest for async Web3Forms submission with native fallback
+  ==================================================================== -->
+  <script type="text/javascript">
+    (function () {
+      function addEvent(el, eventName, handler) {
+        if (!el) return;
+        if (el.addEventListener) {
+          el.addEventListener(eventName, handler, false);
+        } else if (el.attachEvent) {
+          el.attachEvent('on' + eventName, handler);
+        }
+      }
+
+      function hasClass(el, className) {
+        if (!el) return false;
+        return (' ' + el.className + ' ').indexOf(' ' + className + ' ') > -1;
+      }
+
+      function addClass(el, className) {
+        if (!el || hasClass(el, className)) return;
+        el.className = (el.className ? el.className + ' ' : '') + className;
+      }
+
+      function removeClass(el, className) {
+        if (!el) return;
+        el.className = (' ' + el.className + ' ').replace(' ' + className + ' ', ' ').replace(/^\s+|\s+$/g, '');
+      }
+
+      function trimStr(str) {
+        return String(str || '').replace(/^\s+|\s+$/g, '');
+      }
+
+      function initPortfolio() {
+        // 1. Dynamic Year
+        var yearEl = document.getElementById('current-year');
+        if (yearEl) {
+          yearEl.innerHTML = String(new Date().getFullYear());
+        }
+
+        // 2. Mobile Navigation Drawer Toggle
+        var menuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+
+        function closeMenu() {
+          if (!mobileMenu || !menuBtn) return;
+          addClass(mobileMenu, 'hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          menuBtn.innerHTML = 'Menu &#9776;';
+        }
+
+        function openMenu() {
+          if (!mobileMenu || !menuBtn) return;
+          removeClass(mobileMenu, 'hidden');
+          menuBtn.setAttribute('aria-expanded', 'true');
+          menuBtn.innerHTML = 'Close &#10005;';
+        }
+
+        addEvent(menuBtn, 'click', function () {
+          if (hasClass(mobileMenu, 'hidden')) {
+            openMenu();
+          } else {
+            closeMenu();
+          }
+        });
+
+        var drawerLinks = document.getElementsByTagName('a');
+        for (var i = 0; i < drawerLinks.length; i++) {
+          if (hasClass(drawerLinks[i], 'mobile-nav-link')) {
+            addEvent(drawerLinks[i], 'click', closeMenu);
+          }
+        }
+
+        // 3. Project Category Context Switcher
+        var categories = {
+          all: {
+            title: 'Complete StackCraftsStudio Showcase',
+            desc: 'Browse all live web applications, Progressive Web Apps, and database-backed solutions hosted through workers.stackcrafts.com.'
+          },
+          webapp: {
+            title: 'Custom Web Applications',
+            desc: 'Full-stack web applications built with Node.js, HTML/CSS/JavaScript, React, and PostgreSQL—available to explore live on workers.stackcrafts.com.'
+          },
+          pwa: {
+            title: 'Progressive Web Applications (PWAs)',
+            desc: 'Installable, responsive web applications delivering an app-like experience across mobile and desktop devices via workers.stackcrafts.com.'
+          },
+          business: {
+            title: 'Business & Operations Management Systems',
+            desc: 'Structured record, user, and workflow systems engineered for real operational reliability and accessible through workers.stackcrafts.com.'
+          }
+        };
+
+        var catTitle = document.getElementById('category-title');
+        var catDesc = document.getElementById('category-desc');
+        var allButtons = document.getElementsByTagName('button');
+        var filterTabs = [];
+
+        for (var j = 0; j < allButtons.length; j++) {
+          if (hasClass(allButtons[j], 'filter-tab')) {
+            filterTabs.push(allButtons[j]);
+          }
+        }
+
+        for (var k = 0; k < filterTabs.length; k++) {
+          (function (btn) {
+            addEvent(btn, 'click', function () {
+              var key = btn.getAttribute('data-category') || 'all';
+              var info = categories[key] || categories.all;
+
+              for (var m = 0; m < filterTabs.length; m++) {
+                removeClass(filterTabs[m], 'filter-tab-active');
+              }
+              addClass(btn, 'filter-tab-active');
+
+              if (catTitle) catTitle.innerHTML = info.title;
+              if (catDesc) catDesc.innerHTML = info.desc;
+            });
+          })(filterTabs[k]);
+        }
+
+        // 4. Copy Phone Number Utility
+        var copyBtn = document.getElementById('copy-phone-btn');
+        addEvent(copyBtn, 'click', function () {
+          var tempInput = document.createElement('input');
+          tempInput.value = '0710911645';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          try {
+            document.execCommand('copy');
+            copyBtn.innerHTML = 'Copied!';
+            setTimeout(function () {
+              copyBtn.innerHTML = 'Copy';
+            }, 2200);
+          } catch (err) {
+            copyBtn.innerHTML = '0710911645';
+          }
+          document.body.removeChild(tempInput);
+        });
+
+        // 5. Progressive Web3Forms Submission (ES5 XMLHttpRequest + Native POST Fallback)
+        var contactForm = document.getElementById('contact-form');
+        var feedbackBox = document.getElementById('form-feedback');
+        var submitBtn = document.getElementById('contact-submit-btn');
+        var submitText = document.getElementById('contact-submit-text');
+
+        function showFeedback(text, isError) {
+          if (!feedbackBox) return;
+          feedbackBox.innerHTML = text;
+          removeClass(feedbackBox, 'hidden');
+          removeClass(feedbackBox, 'feedback-success');
+          removeClass(feedbackBox, 'feedback-error');
+          addClass(feedbackBox, isError ? 'feedback-error' : 'feedback-success');
+        }
+
+        if (contactForm && window.XMLHttpRequest) {
+          addEvent(contactForm, 'submit', function (e) {
+            var nameVal = trimStr(document.getElementById('contact-name').value);
+            var emailVal = trimStr(document.getElementById('contact-email').value);
+            var phoneVal = trimStr(document.getElementById('contact-phone').value);
+            var typeVal = trimStr(document.getElementById('contact-project-type').value);
+            var msgVal = trimStr(document.getElementById('contact-message').value);
+
+            if (!nameVal || !emailVal || !msgVal) {
+              if (e && e.preventDefault) e.preventDefault();
+              showFeedback('Please complete your Name, Email, and Message before submitting.', true);
+              return false;
+            }
+
+            if (emailVal.indexOf('@') < 1 || emailVal.indexOf('.') < 3) {
+              if (e && e.preventDefault) e.preventDefault();
+              showFeedback('Please enter a valid email address.', true);
+              return false;
+            }
+
+            // Use XHR AJAX if supported; otherwise allow standard HTML POST to api.web3forms.com
+            if (e && e.preventDefault) e.preventDefault();
+
+            if (submitBtn) submitBtn.disabled = true;
+            if (submitText) submitText.innerHTML = 'Sending...';
+
+            var payload =
+              'access_key=' + encodeURIComponent('bf0e28a0-7666-4bfc-91ad-bcb1699d5d6c') +
+              '&subject=' + encodeURIComponent('New Portfolio Inquiry — StackCraftsStudio') +
+              '&from_name=' + encodeURIComponent('Eric Musyoka Thyaka Portfolio') +
+              '&name=' + encodeURIComponent(nameVal) +
+              '&email=' + encodeURIComponent(emailVal) +
+              '&phone=' + encodeURIComponent(phoneVal) +
+              '&project_type=' + encodeURIComponent(typeVal) +
+              '&message=' + encodeURIComponent(msgVal);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://api.web3forms.com/submit', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.setRequestHeader('Accept', 'application/json');
+
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                if (submitBtn) submitBtn.disabled = false;
+                if (submitText) submitText.innerHTML = 'Send Message';
+
+                if (xhr.status >= 200 && xhr.status < 300) {
+                  showFeedback('Thank you! Your message has been sent directly to Eric Musyoka Thyaka. I will get back to you soon.', false);
+                  contactForm.reset();
+                } else {
+                  showFeedback('Unable to send message right now. You can also reach me directly on WhatsApp at 0710911645.', true);
+                }
+              }
+            };
+
+            xhr.onerror = function () {
+              if (submitBtn) submitBtn.disabled = false;
+              if (submitText) submitText.innerHTML = 'Send Message';
+              showFeedback('Network error while sending. Please message me directly on WhatsApp at 0710911645.', true);
+            };
+
+            xhr.send(payload);
+            return false;
+          });
+        }
+      }
+
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        initPortfolio();
+      } else {
+        addEvent(document, 'DOMContentLoaded', initPortfolio);
+      }
+    })();
+  </script>
+</body>
+</html>
